@@ -1,10 +1,8 @@
-const express = require('express');
-const app = express();
-app.get('/', function (req, res) {
-    res.send('<h1>Hello World from Nodejs!</h1>');
+require('ignore-styles');
+
+require('@babel/register')({
+    ignore: [/(node_moule)/],
+    presets: ['@babel/preset-env', '@babel/preset-react']
 });
-const server = app.listen(80, function () {
-    const host = server.address().address;
-    const port = server.address().port;
-    console.log('Example app listening at http://%s:%s', host, port);
-});
+
+require('./server');
