@@ -1,6 +1,5 @@
-import express from 'express';
-import path from 'path';
-import React from "react";
+const express = require('express');
+const path = require('path');
 const PORT = 8888;
 
 const app = express();
